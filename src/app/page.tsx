@@ -440,7 +440,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {/* Income Statement */}
               <Card>
-                <CardHeader className="pb-2 sm:pb-4">
+                <CardHeader>
                   <CardTitle className="text-base sm:text-lg text-slate-800">Eredménykimutatás (ezer Ft)</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -474,7 +474,7 @@ export default function Home() {
 
               {/* Balance Sheet */}
               <Card>
-                <CardHeader className="pb-2 sm:pb-4">
+                <CardHeader>
                   <CardTitle className="text-base sm:text-lg text-slate-800">Mérleg (ezer Ft)</CardTitle>
                 </CardHeader>
                 <CardContent>
