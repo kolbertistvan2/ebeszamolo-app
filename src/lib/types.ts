@@ -17,6 +17,8 @@ export interface CompanyFinancialReport {
   taxNumber: string;
   headquarter: string;
   year: number;
+  previousYear: number;  // Előző üzleti év (pl. 2022)
+  targetYear: number;    // Tárgy üzleti év (pl. 2023)
   currency: string;
   unit: string;
   filingDate: string;

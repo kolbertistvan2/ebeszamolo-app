@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2025-12-02
+
+### Added
+- **Year Selection**: Select specific fiscal year (2020-2024) for report retrieval
+- **Available Years Error**: When selected year not available, shows list of available years
+- **Kolbert AI Logo**: Footer now displays Kolbert AI logo with version number
+- **Beta Badge**: "Beta v0.1" indicator in footer
+
+### Changed
+- **UI Overhaul**: Complete redesign with shadcn/ui components
+  - Light theme with slate color palette
+  - Side-by-side layout for search and live view
+  - Compact card headers with reduced padding
+  - Responsive mobile-first design
+- **Live View Behavior**:
+  - Session card stays visible after completion with "Befejezve" state
+  - Prevents scroll jump on WebSocket disconnect
+  - Grey placeholder when session ends
+- **Export Headers**: CSV and Excel now show concrete year numbers (2022, 2023) instead of "Előző év" / "Tárgyév"
+- **Meta Tags**: Updated title and description to "Kolbert AI Céginformáció"
+- **Error Messages**: Hungarian error message for unavailable years with available years list
+
+### Fixed
+- WebSocket disconnect scroll issue resolved by removing iframe on completion
+- Year selection now correctly matches report period dates
+
 ## [2.0.0] - 2025-12-02
 
 ### Added

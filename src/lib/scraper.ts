@@ -276,21 +276,61 @@ export class EBeszamoloScraper {
         };
       });
 
-      console.log('  → Looking for financial reports...');
-      let reportLink = await page.$('a:has-text("Általános üzleti évet záró")');
-      if (!reportLink) {
-        reportLink = await page.$('a:has-text("ÜZLETI ÉVET ZÁRÓ")');
-      }
-      if (!reportLink) {
-        reportLink = await page.$('a:has-text("Éves beszámoló")');
+      console.log(`  → Looking for financial reports for year ${targetYear}...`);
+
+      // Keressük meg a megfelelő évre vonatkozó beszámolót
+      // Az oldalon a beszámolók div.balance-container elemekben vannak
+      // Bennük: link + közzétételi dátum + tárgyév (pl. "2023. január 01. - 2023. december 31.")
+      const reportSearchResult = await page.evaluate((year: number) => {
+        // Keressük a balance-container div-eket
+        const containers = document.querySelectorAll('div.balance-container');
+
+        // Gyűjtsük össze az elérhető éveket
+        const availableYears: number[] = [];
+
+        for (const container of Array.from(containers)) {
+          const containerText = container.textContent || '';
+
+          // Keressük az évszámot a december 31. előtt
+          const yearMatch = containerText.match(/(\d{4})\.\s*december\s*31/i);
+          if (yearMatch) {
+            availableYears.push(parseInt(yearMatch[1]));
+          }
+
+          // Keressük a tárgyév mintáját: "YYYY. december 31."
+          const yearPattern = new RegExp(`${year}\\.\\s*december\\s*31`, 'i');
+          if (yearPattern.test(containerText)) {
+            // Megtaláltuk - keressük meg benne a beszámoló linket
+            const link = container.querySelector('a.view-obr-balance-link');
+            if (link) {
+              // Visszaadjuk a link selectorját
+              return {
+                found: true,
+                selector: 'a.view-obr-balance-link[data-code="' + link.getAttribute('data-code') + '"]',
+                availableYears
+              };
+            }
+          }
+        }
+
+        // Nem találtuk meg a keresett évet
+        return {
+          found: false,
+          selector: null,
+          availableYears: [...new Set(availableYears)].sort((a, b) => b - a)
+        };
+      }, targetYear);
+
+      if (!reportSearchResult.found || !reportSearchResult.selector) {
+        const yearsText = reportSearchResult.availableYears.length > 0
+          ? `Elérhető évek: ${reportSearchResult.availableYears.join(', ')}`
+          : 'Nincs elérhető beszámoló';
+        console.log(`  ✗ No report found for year ${targetYear}. ${yearsText}`);
+        throw new Error(`A ${targetYear}. évre nincs elérhető beszámoló. ${yearsText}`);
       }
 
-      if (!reportLink) {
-        console.log('  ✗ No reports found');
-        return null;
-      }
-
-      await reportLink.click();
+      // Kattintsunk a megfelelő linkre
+      await page.click(reportSearchResult.selector);
       await page.waitForLoadState('networkidle');
       await this.delay(1000);
 
@@ -307,6 +347,8 @@ export class EBeszamoloScraper {
         taxNumber: companyInfo.taxNumber || financialData.taxNumber,
         headquarter: companyInfo.headquarter || financialData.headquarter,
         year: targetYear,
+        previousYear: financialData.extractedPreviousYear || targetYear - 1,
+        targetYear: financialData.extractedTargetYear || targetYear,
         currency: financialData.currency,
         unit: financialData.unit,
         filingDate: financialData.filingDate,
@@ -389,6 +431,18 @@ export class EBeszamoloScraper {
 
       const hqMatch = pageText.match(/Székhely:\s*([^\n]+)/);
       const headquarter = hqMatch ? hqMatch[1].trim() : '';
+
+      // Évszámok kinyerése a beszámoló időszakból
+      // Keressük a mintát: "YYYY. január 01. - YYYY. december 31." vagy hasonló
+      // Az oldalon van: "2024. január 01. - 2024. december 31. IDŐSZAKRA VONATKOZÓ"
+      let extractedPreviousYear = 0;
+      let extractedTargetYear = 0;
+
+      const periodMatch = pageText.match(/(\d{4})\.\s*január\s*\d{1,2}\.\s*-\s*(\d{4})\.\s*december\s*\d{1,2}\./i);
+      if (periodMatch) {
+        extractedPreviousYear = parseInt(periodMatch[1]) - 1; // Előző év = tárgyév - 1
+        extractedTargetYear = parseInt(periodMatch[2]);
+      }
 
       const incomeStatementRows: RowData[] = [];
       const balanceSheetRows: RowData[] = [];
@@ -497,6 +551,8 @@ export class EBeszamoloScraper {
         registrationNumber,
         taxNumber,
         headquarter,
+        extractedPreviousYear,
+        extractedTargetYear,
         incomeStatement: { rows: incomeStatementRows },
         balanceSheet: { rows: balanceSheetRows }
       };

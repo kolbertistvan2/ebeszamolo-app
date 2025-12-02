@@ -1,0 +1,358 @@
+{
+  "companyName": "Goal Hungary Kereskedelmi és Szolgáltató Korlátolt Felelősségű Társaság",
+  "registrationNumber": "03-09-125370",
+  "taxNumber": "24146041-2-03",
+  "headquarter": "Magyarország, 6034 Helvécia Gazdasági dűlő 11",
+  "year": 2024,
+  "previousYear": 2023,
+  "targetYear": 2024,
+  "currency": "HUF",
+  "unit": "ezer",
+  "filingDate": "2025. május 30.",
+  "incomeStatement": {
+    "rows": [
+      {
+        "rowNumber": "001",
+        "itemCode": "",
+        "itemName": "I. Értékesítés nettó árbevétele",
+        "previousYearData": 407568,
+        "amendments": 0,
+        "targetYearData": 511619
+      },
+      {
+        "rowNumber": "002",
+        "itemCode": "",
+        "itemName": "II. Aktivált saját teljesítmények értéke",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "003",
+        "itemCode": "",
+        "itemName": "III. Egyéb bevételek",
+        "previousYearData": 3560,
+        "amendments": 0,
+        "targetYearData": 1953
+      },
+      {
+        "rowNumber": "004",
+        "itemCode": "",
+        "itemName": "IV. Anyagjellegű ráfordítások",
+        "previousYearData": 314670,
+        "amendments": 0,
+        "targetYearData": 416341
+      },
+      {
+        "rowNumber": "005",
+        "itemCode": "",
+        "itemName": "V. Személyi jellegű ráfordítások",
+        "previousYearData": 16635,
+        "amendments": 0,
+        "targetYearData": 16393
+      },
+      {
+        "rowNumber": "006",
+        "itemCode": "",
+        "itemName": "VI. Értékcsökkenési leírás",
+        "previousYearData": 4114,
+        "amendments": 0,
+        "targetYearData": 5361
+      },
+      {
+        "rowNumber": "007",
+        "itemCode": "",
+        "itemName": "VII. Egyéb ráfordítások",
+        "previousYearData": 6174,
+        "amendments": 0,
+        "targetYearData": 2269
+      },
+      {
+        "rowNumber": "008",
+        "itemCode": "",
+        "itemName": "A. Üzemi (üzleti) tevékenység eredménye",
+        "previousYearData": 69535,
+        "amendments": 0,
+        "targetYearData": 73208
+      },
+      {
+        "rowNumber": "009",
+        "itemCode": "",
+        "itemName": "VIII. Pénzügyi műveletek bevételei",
+        "previousYearData": 12,
+        "amendments": 0,
+        "targetYearData": 13
+      },
+      {
+        "rowNumber": "010",
+        "itemCode": "",
+        "itemName": "IX. Pénzügyi műveletek ráfordításai",
+        "previousYearData": 174,
+        "amendments": 0,
+        "targetYearData": 107
+      },
+      {
+        "rowNumber": "011",
+        "itemCode": "",
+        "itemName": "B. Pénzügyi műveletek eredménye",
+        "previousYearData": -162,
+        "amendments": 0,
+        "targetYearData": -94
+      },
+      {
+        "rowNumber": "012",
+        "itemCode": "",
+        "itemName": "C. Adózás előtti eredmény",
+        "previousYearData": 69373,
+        "amendments": 0,
+        "targetYearData": 73114
+      },
+      {
+        "rowNumber": "013",
+        "itemCode": "",
+        "itemName": "X. Adófizetési kötelezettség",
+        "previousYearData": 7110,
+        "amendments": 0,
+        "targetYearData": 2332
+      },
+      {
+        "rowNumber": "014",
+        "itemCode": "",
+        "itemName": "X/1. Halasztott adókülönbözet",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "015",
+        "itemCode": "",
+        "itemName": "D. Adózott eredmény",
+        "previousYearData": 62263,
+        "amendments": 0,
+        "targetYearData": 70782
+      }
+    ]
+  },
+  "balanceSheet": {
+    "rows": [
+      {
+        "rowNumber": "002",
+        "itemCode": "",
+        "itemName": "A. Befektetett eszközök",
+        "previousYearData": 23433,
+        "amendments": 0,
+        "targetYearData": 21388
+      },
+      {
+        "rowNumber": "003",
+        "itemCode": "",
+        "itemName": "I. Immateriális javak",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "004",
+        "itemCode": "",
+        "itemName": "II. Tárgyi eszközök",
+        "previousYearData": 23433,
+        "amendments": 0,
+        "targetYearData": 21388
+      },
+      {
+        "rowNumber": "005",
+        "itemCode": "",
+        "itemName": "III. Befektetett pénzügyi eszközök",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "006",
+        "itemCode": "",
+        "itemName": "IV. Halasztott adókövetelés",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "007",
+        "itemCode": "",
+        "itemName": "B. Forgóeszközök",
+        "previousYearData": 107151,
+        "amendments": 0,
+        "targetYearData": 137521
+      },
+      {
+        "rowNumber": "008",
+        "itemCode": "",
+        "itemName": "I. Készletek",
+        "previousYearData": 13917,
+        "amendments": 0,
+        "targetYearData": 21911
+      },
+      {
+        "rowNumber": "009",
+        "itemCode": "",
+        "itemName": "II. Követelések",
+        "previousYearData": 17044,
+        "amendments": 0,
+        "targetYearData": 62606
+      },
+      {
+        "rowNumber": "010",
+        "itemCode": "",
+        "itemName": "III. Értékpapírok",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "011",
+        "itemCode": "",
+        "itemName": "IV. Pénzeszközök",
+        "previousYearData": 76190,
+        "amendments": 0,
+        "targetYearData": 53004
+      },
+      {
+        "rowNumber": "012",
+        "itemCode": "",
+        "itemName": "C. Aktív időbeli elhatárolások",
+        "previousYearData": 192,
+        "amendments": 0,
+        "targetYearData": 257
+      },
+      {
+        "rowNumber": "013",
+        "itemCode": "",
+        "itemName": "Eszközök (aktívák) összesen",
+        "previousYearData": 130776,
+        "amendments": 0,
+        "targetYearData": 159166
+      },
+      {
+        "rowNumber": "015",
+        "itemCode": "",
+        "itemName": "D. Saját tőke",
+        "previousYearData": 71886,
+        "amendments": 0,
+        "targetYearData": 129257
+      },
+      {
+        "rowNumber": "016",
+        "itemCode": "",
+        "itemName": "I. Jegyzett tőke",
+        "previousYearData": 3000,
+        "amendments": 0,
+        "targetYearData": 3000
+      },
+      {
+        "rowNumber": "017",
+        "itemCode": "",
+        "itemName": "II. Jegyzett, de még be nem fizetett tőke",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "018",
+        "itemCode": "",
+        "itemName": "III. Tőketartalék",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "019",
+        "itemCode": "",
+        "itemName": "IV. Eredménytartalék",
+        "previousYearData": 6623,
+        "amendments": 0,
+        "targetYearData": 55475
+      },
+      {
+        "rowNumber": "020",
+        "itemCode": "",
+        "itemName": "V. Lekötött tartalék",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "021",
+        "itemCode": "",
+        "itemName": "VI. Értékelési tartalék",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "022",
+        "itemCode": "",
+        "itemName": "VII. Adózott eredmény",
+        "previousYearData": 62263,
+        "amendments": 0,
+        "targetYearData": 70782
+      },
+      {
+        "rowNumber": "023",
+        "itemCode": "",
+        "itemName": "E. Céltartalékok",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "024",
+        "itemCode": "",
+        "itemName": "F. Kötelezettségek",
+        "previousYearData": 57819,
+        "amendments": 0,
+        "targetYearData": 29209
+      },
+      {
+        "rowNumber": "025",
+        "itemCode": "",
+        "itemName": "I. Hátrasorolt kötelezettségek",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "026",
+        "itemCode": "",
+        "itemName": "II. Hosszú lejáratú kötelezettségek",
+        "previousYearData": 0,
+        "amendments": 0,
+        "targetYearData": 0
+      },
+      {
+        "rowNumber": "027",
+        "itemCode": "",
+        "itemName": "III. Rövid lejáratú kötelezettségek",
+        "previousYearData": 57819,
+        "amendments": 0,
+        "targetYearData": 29209
+      },
+      {
+        "rowNumber": "028",
+        "itemCode": "",
+        "itemName": "G. Passzív időbeli elhatárolások",
+        "previousYearData": 1071,
+        "amendments": 0,
+        "targetYearData": 700
+      },
+      {
+        "rowNumber": "029",
+        "itemCode": "",
+        "itemName": "Források (passzívák) összesen",
+        "previousYearData": 130776,
+        "amendments": 0,
+        "targetYearData": 159166
+      }
+    ]
+  },
+  "extractedAt": "2025-12-02T22:22:39.380Z",
+  "sourceURL": "https://e-beszamolo.im.gov.hu/oldal/beszamolo_megjelenites"
+}

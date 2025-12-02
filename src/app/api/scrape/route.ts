@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
             controller.enqueue(encoder.encode(JSON.stringify({
               type: 'result',
               success: false,
-              error: 'No data found for the given search criteria'
+              error: 'A kiválasztott évre nem található adat'
             }) + '\n'));
           }
 

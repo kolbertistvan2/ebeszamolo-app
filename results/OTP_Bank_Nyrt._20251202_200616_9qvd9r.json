@@ -1,0 +1,18 @@
+{
+  "companyName": "OTP Bank Nyrt.",
+  "registrationNumber": "01-10-041585",
+  "taxNumber": "10537914-4-44",
+  "headquarter": "Magyarország, 1051 Budapest Nádor utca 16",
+  "year": 2024,
+  "currency": "HUF",
+  "unit": "ezer",
+  "filingDate": "2025. április 25.",
+  "incomeStatement": {
+    "rows": []
+  },
+  "balanceSheet": {
+    "rows": []
+  },
+  "extractedAt": "2025-12-02T20:06:16.580Z",
+  "sourceURL": "https://e-beszamolo.im.gov.hu/oldal/beszamolo_megjelenites"
+}
