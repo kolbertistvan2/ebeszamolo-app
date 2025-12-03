@@ -261,16 +261,16 @@ export default function Home() {
                 <div className="flex gap-2">
                   <Button
                     type="button"
-                    variant={searchType === 'name' ? 'default' : 'outline'}
-                    className="flex-1"
+                    variant={searchType === 'name' ? 'secondary' : 'outline'}
+                    className={`flex-1 ${searchType === 'name' ? 'bg-slate-200 text-slate-800 hover:bg-slate-300' : ''}`}
                     onClick={() => setSearchType('name')}
                   >
                     Cégnév
                   </Button>
                   <Button
                     type="button"
-                    variant={searchType === 'taxNumber' ? 'default' : 'outline'}
-                    className="flex-1"
+                    variant={searchType === 'taxNumber' ? 'secondary' : 'outline'}
+                    className={`flex-1 ${searchType === 'taxNumber' ? 'bg-slate-200 text-slate-800 hover:bg-slate-300' : ''}`}
                     onClick={() => setSearchType('taxNumber')}
                   >
                     Adószám
@@ -310,7 +310,7 @@ export default function Home() {
                 <Button
                   type="submit"
                   disabled={loading || !searchValue}
-                  className="w-full"
+                  className="w-full bg-slate-900 hover:bg-slate-800"
                   size="lg"
                 >
                   {loading ? (
@@ -344,7 +344,7 @@ export default function Home() {
                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-400"></span>
                     </span>
                   )}
-                  {liveViewUrl ? 'Élő nézet' : 'Befejezve'}
+                  {liveViewUrl ? 'Kolbert AI Böngésző - Élő nézet' : 'Kolbert AI Böngésző - Befejezve'}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-1 px-4">
@@ -418,19 +418,19 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <div className="bg-slate-50 rounded-lg p-3 sm:p-4 border border-slate-100">
                     <p className="text-slate-500 text-xs sm:text-sm">Cégjegyzékszám</p>
-                    <p className="text-slate-800 font-medium text-sm sm:text-base break-all">{result.registrationNumber || '-'}</p>
+                    <p className="text-slate-800 font-medium text-xs sm:text-sm break-all">{result.registrationNumber || '-'}</p>
                   </div>
                   <div className="bg-slate-50 rounded-lg p-3 sm:p-4 border border-slate-100">
                     <p className="text-slate-500 text-xs sm:text-sm">Adószám</p>
-                    <p className="text-slate-800 font-medium text-sm sm:text-base break-all">{result.taxNumber || '-'}</p>
+                    <p className="text-slate-800 font-medium text-xs sm:text-sm break-all">{result.taxNumber || '-'}</p>
                   </div>
                   <div className="bg-slate-50 rounded-lg p-3 sm:p-4 border border-slate-100">
                     <p className="text-slate-500 text-xs sm:text-sm">Beszámoló éve</p>
-                    <p className="text-slate-800 font-medium text-sm sm:text-base">{result.year}</p>
+                    <p className="text-slate-800 font-medium text-xs sm:text-sm">{result.year}</p>
                   </div>
                   <div className="bg-slate-50 rounded-lg p-3 sm:p-4 border border-slate-100">
                     <p className="text-slate-500 text-xs sm:text-sm">Pénznem / Egység</p>
-                    <p className="text-slate-800 font-medium text-sm sm:text-base">{result.currency} / {result.unit}</p>
+                    <p className="text-slate-800 font-medium text-xs sm:text-sm">{result.currency} / {result.unit}</p>
                   </div>
                 </div>
               </CardContent>
@@ -445,7 +445,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
-                    <table className="w-full text-xs sm:text-sm">
+                    <table className="w-full text-[10px] sm:text-xs">
                       <thead>
                         <tr className="text-slate-500 border-b-2 border-slate-300">
                           <th className="text-left py-2 font-medium">Megnevezés</th>
@@ -479,7 +479,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
-                    <table className="w-full text-xs sm:text-sm">
+                    <table className="w-full text-[10px] sm:text-xs">
                       <thead>
                         <tr className="text-slate-500 border-b-2 border-slate-300">
                           <th className="text-left py-2 font-medium">Megnevezés</th>
