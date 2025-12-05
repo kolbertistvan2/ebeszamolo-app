@@ -395,7 +395,7 @@ export default function Home() {
               <CardHeader>
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <div>
-                    <CardTitle className="text-xl sm:text-2xl text-slate-800">{result.companyName}</CardTitle>
+                    <CardTitle className="text-lg sm:text-xl text-slate-800">{result.companyName}</CardTitle>
                     <CardDescription className="text-sm sm:text-base">{result.headquarter}</CardDescription>
                   </div>
                   <div className="flex flex-wrap gap-2">
